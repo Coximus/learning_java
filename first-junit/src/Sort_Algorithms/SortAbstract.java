@@ -18,6 +18,11 @@ public class SortAbstract
 
 	}
 
+	public int[] getArray()
+	{
+		return localArray;
+	}
+
 	public void OutputArray()
 	{
 		for (int i = 0; i < localArray.length; i++) {

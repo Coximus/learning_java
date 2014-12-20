@@ -1,0 +1,9 @@
+# !/bin/bash
+
+~/jdk1.7.0_71/bin/javac -cp ~/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ src/Sort_Algorithms/SortInterface.java -d bin/
+~/jdk1.7.0_71/bin/javac -cp ~/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ src/Sort_Algorithms/SortAbstract.java -d bin/
+~/jdk1.7.0_71/bin/javac -cp ~/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ src/Sort_Algorithms/BubbleSort.java -d bin/
+~/jdk1.7.0_71/bin/javac -cp ~/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ src/Sort_Algorithms/QuickSort.java -d bin/
+
+~/jdk1.7.0_71/bin/javac -cp ~/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ src/test/FirstTest.java -d bin/
+~/jdk1.7.0_71/bin/javac -cp ~/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ src/test/AllTests.java -d bin/

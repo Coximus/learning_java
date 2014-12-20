@@ -21,30 +21,34 @@ public class QuickSort extends SortAbstract implements SortInterface
 
 	private void RegrassionSort(int low, int high)
 	{
-		int i = low;
+		int i = low, 
 		int j = high;
-		int pivot = (int) ((low+(high-low))/2);
-		System.out.printf("Low %d : High %d : Pivot %d\n", low, high, pivot);
+	    int pivot = localArray[low + (high-low)/2];
 
-		while (i <= j) {
-			while(localArray[i] < localArray[pivot]) {
+	    while (i <= j) {
+			while (localArray[i] < pivot) {
 				i++;
 			}
-			while(localArray[j] > localArray[pivot]) {
+			while (localArray[j] > pivot) {
 				j--;
 			}
+
 			if (i <= j) {
-				int temp = localArray[i];
-				localArray[i] = localArray[j];
-				localArray[j] = temp;
-			}
-			if (low < j) {
-				RegrassionSort(low, j);
-			}
-			if (i < high) {
-				RegrassionSort(i, high);
+				swapElements(i, j);
+				i++;
+				j--;
 			}
 		}
+		if (low < j)
+			RegrassionSort(low, j);
+	    if (i < high)
+			RegrassionSort(i, high);
+	}
+
+	private void swapElements(int i, int j) {
+		int temp = localArray[i];
+		localArray[i] = localArray[j];
+		localArray[j] = temp;
 	}
 
 	public static void main(String[] args)
