@@ -23,6 +23,32 @@ public class LinkedList
         AddNodeToList(newNode);
     }
 
+    public void addNode(LinkedListNode node)
+    {
+        AddNodeToList(node);
+    }
+
+    public void removeNode(LinkedListNode node)
+    {
+        RemoveNodeFromList(node);
+    }
+
+    public LinkedListNode findByData(int data)
+    {
+        LinkedListNode currentNode = rootNode;
+        for (int i = 0; i < linkedListSize; i++) {
+            if (currentNode.getData() == data) {
+                return currentNode;
+            }
+            currentNode = currentNode.getChild();
+            if (currentNode == null) { // should never happen
+                break;
+            }
+        }
+
+        return null;
+    }
+
     public int[] toArray()
     {
         if (rootNode == null) {
@@ -46,17 +72,33 @@ public class LinkedList
     {
         if (rootNode == null) {
             rootNode = newNode;
-            return;
-        }
+        } else {
+            LinkedListNode currentNode = rootNode;
+            while(currentNode.getChild() != null)
+            {
+                currentNode = currentNode.getChild();
+            }
 
-        LinkedListNode currentNode = rootNode;
-        while(currentNode.getChild() != null)
-        {
-            currentNode = currentNode.getChild();
+            currentNode.setChild(newNode);
+            newNode.setParent(currentNode);
         }
-
-        currentNode.setChild(newNode);
-        newNode.setParent(currentNode);
         linkedListSize++;
+    }
+
+    private void RemoveNodeFromList(LinkedListNode nodeToRemove)
+    {
+        LinkedListNode childNode = nodeToRemove.getChild();
+        LinkedListNode parentNode = nodeToRemove.getParent();
+        if (nodeToRemove == rootNode) {
+            rootNode = childNode;
+        }
+
+        if (parentNode != null) {
+            parentNode.setChild(childNode);
+        } 
+        if (childNode != null) {
+            childNode.setParent(parentNode);
+        }
+        linkedListSize--;
     }
 }
