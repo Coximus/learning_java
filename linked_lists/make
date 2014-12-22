@@ -1,0 +1,8 @@
+# !/bin/bash
+
+~/Applications/jdk1.8.0_25/bin/javac -cp ~/Applications/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ src/LinkedLists/LinkedListNode.java -d bin/
+~/Applications/jdk1.8.0_25/bin/javac -cp ~/Applications/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ src/LinkedLists/LinkedList.java -d bin/
+
+~/Applications/jdk1.8.0_25/bin/javac -cp ~/Applications/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ tests/LinkedLists/LinkedListNodeTest.java -d bin/
+~/Applications/jdk1.8.0_25/bin/javac -cp ~/Applications/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ tests/LinkedLists/LinkedListTest.java -d bin/
+~/Applications/jdk1.8.0_25/bin/javac -cp ~/Applications/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ tests/AllTests.java -d bin/
