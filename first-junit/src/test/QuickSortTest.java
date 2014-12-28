@@ -5,7 +5,7 @@ import org.junit.Test;
 import SortAlgorithms.QuickSort;
 import java.util.Arrays;
 
-public class FirstTest {
+public class QuickSortTest {
     @Test
     public void AlreadyOrdered()
     {

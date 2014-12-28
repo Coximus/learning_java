@@ -21,7 +21,7 @@ public class QuickSort extends SortAbstract implements SortInterface
 
 	private void RegrassionSort(int low, int high)
 	{
-		int i = low, 
+		int i = low;
 		int j = high;
 	    int pivot = localArray[low + (high-low)/2];
 
