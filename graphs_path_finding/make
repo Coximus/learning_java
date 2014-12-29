@@ -1,0 +1,6 @@
+# !/bin/bash
+
+~/Applications/jdk1.8.0_25/bin/javac -cp ~/Applications/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ src/PathFind/Node.java -d bin/
+~/Applications/jdk1.8.0_25/bin/javac -cp ~/Applications/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ src/PathFind/Graph.java -d bin/
+
+~/Applications/jdk1.8.0_25/bin/javac -cp ~/Applications/netbeans-8.0.2/platform/modules/org-netbeans-libs-junit4.jar:./bin:./ tests/GraphTest.java -d bin/
